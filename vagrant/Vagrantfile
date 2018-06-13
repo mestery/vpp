@@ -276,6 +276,15 @@ set -x
 
 echo Args passed: [[ $@ ]]
 
+if [ -f /home/vagrant/gopath/src/github.com/contiv/vpp/vagrant/images.tar ]; then
+    echo "Found saved images at /vagrant/images.tar"
+    docker load -i /home/vagrant/gopath/src/github.com/contiv/vpp/vagrant/images.tar
+else
+  # Pull images
+  echo "Pulling contiv-vpp plugin images..."
+  /home/vagrant/gopath/src/github.com/contiv/vpp/k8s/pull-images.sh -b $6
+fi
+
 source /vagrant/config/init
 
 if [ $3 = 'stn' ]; then
