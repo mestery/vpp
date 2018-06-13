@@ -424,7 +424,8 @@ VAGRANTFILE_API_VERSION = "2"
 
       config.vm.define node_name do |node|
         node.vm.hostname = node_name
-        # Interface for K8s Cluster
+        node.vm.synced_folder "../", "/home/vagrant/gopath/src/github.com/contiv/vpp" 
+	# Interface for K8s Cluster
         if dep_scenario == 'stn'
           node.vm.network :private_network, type: "dhcp", auto_config: true, virtualbox__intnet: "vpp"
           # default router
