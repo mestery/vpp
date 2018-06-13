@@ -189,10 +189,11 @@ sudo apt-get install -y python-pip \
 #Install pip
 sudo pip install --upgrade pip
 sudo pip install --upgrade virtualenv
+sudo pip install kubernetes
 
-if [ -f /vagrant/images.tar ]; then
+if [ -f /home/vagrant/gopath/src/github.com/contiv/vpp/vagrant/images.tar ]; then
     echo "Found saved images at /vagrant/images.tar"
-    docker load -i /vagrant/images.tar
+    docker load -i /home/vagrant/gopath/src/github.com/contiv/vpp/vagrant/images.tar
 else
   # Pull images
   echo "Pulling contiv-vpp plugin images..."
