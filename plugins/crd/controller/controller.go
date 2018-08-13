@@ -46,7 +46,7 @@ type ContivTelemetryController struct {
 
 	K8sClient *kubernetes.Clientset
 	CrdClient *crdClientSet.Clientset
-	ApiClient    *apiextcs.Clientset
+	APIClient    *apiextcs.Clientset
 
 	clientset    kubernetes.Interface
 	queue        workqueue.RateLimitingInterface
