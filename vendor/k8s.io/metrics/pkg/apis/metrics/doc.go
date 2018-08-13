@@ -14,6 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-// +k8s:deepcopy-gen=package
-// +groupName=metrics.k8s.io
+// TODO: this needs to be cross-registered as metrics.metrics.k8s.io
+
+// +k8s:deepcopy-gen=package,register
+
 package metrics

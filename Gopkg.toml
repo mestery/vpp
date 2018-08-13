@@ -95,7 +95,7 @@ required = ["github.com/wadey/gocovmerge", "github.com/docker/docker/api", "gith
   branch = "master"
   name = "golang.org/x/net"
 
-[[constraint]]
+[[override]]
   name = "google.golang.org/grpc"
   version = "1.2.1"
 

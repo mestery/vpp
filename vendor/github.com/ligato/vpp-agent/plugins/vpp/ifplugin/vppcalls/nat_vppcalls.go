@@ -89,8 +89,7 @@ func (handler *natVppHandler) SetNat44Forwarding(enableFwd bool) error {
 	if err := handler.callsChannel.SendRequest(req).ReceiveReply(reply); err != nil {
 		return err
 	}
-	if reply.Retval < 0 {
-		fmt.Errorf("CONTIV DBG level=error: %s returned %d", reply.GetMessageName(), reply.Retval)
+	if reply.Retval != 0 {
 		return fmt.Errorf("%s returned %d", reply.GetMessageName(), reply.Retval)
 	}
 
@@ -113,8 +112,7 @@ func (handler *natVppHandler) handleNat44Interface(ifIdx uint32, isInside, isAdd
 	if err := handler.callsChannel.SendRequest(req).ReceiveReply(reply); err != nil {
 		return err
 	}
-	if reply.Retval < 0 {
-		fmt.Errorf("CONTIV DBG level=error: %s returned %d", reply.GetMessageName(), reply.Retval)
+	if reply.Retval != 0 {
 		return fmt.Errorf("%s returned %d", reply.GetMessageName(), reply.Retval)
 	}
 
@@ -137,8 +135,7 @@ func (handler *natVppHandler) handleNat44InterfaceOutputFeature(ifIdx uint32, is
 	if err := handler.callsChannel.SendRequest(req).ReceiveReply(reply); err != nil {
 		return err
 	}
-	if reply.Retval < 0 {
-		fmt.Errorf("CONTIV DBG level=error: %s returned %d", reply.GetMessageName(), reply.Retval)
+	if reply.Retval != 0 {
 		return fmt.Errorf("%s returned %d", reply.GetMessageName(), reply.Retval)
 	}
 
@@ -163,8 +160,7 @@ func (handler *natVppHandler) handleNat44AddressPool(first, last []byte, vrf uin
 	if err := handler.callsChannel.SendRequest(req).ReceiveReply(reply); err != nil {
 		return err
 	}
-	if reply.Retval < 0 {
-		fmt.Errorf("CONTIV DBG level=error: %s returned %d", reply.GetMessageName(), reply.Retval)
+	if reply.Retval != 0 {
 		return fmt.Errorf("%s returned %d", reply.GetMessageName(), reply.Retval)
 	}
 
@@ -202,8 +198,7 @@ func (handler *natVppHandler) handleNat44StaticMapping(ctx *StaticMappingContext
 	if err := handler.callsChannel.SendRequest(req).ReceiveReply(reply); err != nil {
 		return err
 	}
-	if reply.Retval < 0 {
-		fmt.Errorf("CONTIV DBG level=error: %s returned %d", reply.GetMessageName(), reply.Retval)
+	if reply.Retval != 0 {
 		return fmt.Errorf("%s returned %d", reply.GetMessageName(), reply.Retval)
 	}
 
@@ -245,8 +240,7 @@ func (handler *natVppHandler) handleNat44StaticMappingLb(ctx *StaticMappingLbCon
 	if err := handler.callsChannel.SendRequest(req).ReceiveReply(reply); err != nil {
 		return err
 	}
-	if reply.Retval < 0 {
-		fmt.Errorf("CONTIV DBG level=error: %s returned %d", reply.GetMessageName(), reply.Retval)
+	if reply.Retval != 0 {
 		return fmt.Errorf("%s returned %d", reply.GetMessageName(), reply.Retval)
 	}
 
@@ -285,8 +279,7 @@ func (handler *natVppHandler) handleNat44IdentityMapping(ctx *IdentityMappingCon
 	if err := handler.callsChannel.SendRequest(req).ReceiveReply(reply); err != nil {
 		return err
 	}
-	if reply.Retval < 0 {
-		fmt.Errorf("CONTIV DBG level=error: %s returned %d", reply.GetMessageName(), reply.Retval)
+	if reply.Retval != 0 {
 		return fmt.Errorf("%s returned %d", reply.GetMessageName(), reply.Retval)
 	}
 
