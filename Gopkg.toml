@@ -44,7 +44,7 @@ required = [
 
 [[constraint]]
   name = "github.com/ligato/vpp-agent"
-  revision = "06c81a53a091037b91e646000b390db559bc52ca"
+  revision = "bb291ff70df8d66059c6cde28be00ad3d8853903"
 
 [[constraint]]
   name = "github.com/ligato/cn-infra"
@@ -107,7 +107,7 @@ required = [
   branch = "master"
   name = "golang.org/x/net"
 
-[[constraint]]
+[[override]]
   name = "k8s.io/apiserver"
   version = "kubernetes-1.11.1"
 
