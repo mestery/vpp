@@ -52,7 +52,7 @@ required = ["github.com/wadey/gocovmerge", "github.com/docker/docker/api", "gith
   name = "k8s.io/apiserver"
   revision = "a35277792fddcf69f8cbbb8a9cb7727b23077409"
 
-[[constraint]]
+[[override]]
   name = "github.com/ugorji/go"
   version = "v1.1.1"
 
