@@ -41,7 +41,6 @@ required = [
   "k8s.io/code-generator/cmd/lister-gen"
 ]
 
-
 [[constraint]]
   name = "github.com/ligato/vpp-agent"
   revision = "bb291ff70df8d66059c6cde28be00ad3d8853903"
@@ -59,7 +58,7 @@ required = [
   name = "github.com/wadey/gocovmerge"
 
 [[constraint]]
-  revision = "1c81e2a794c6e26a4c650142ae8893c47f619764"
+  version = "v1.0.0-rc5"
   name = "github.com/opencontainers/runc"
 
 [[override]]
@@ -68,7 +67,7 @@ required = [
 
 [[constraint]]
   name = "github.com/ugorji/go"
-  revision = "ded73eae5db7e7a0ef6f55aace87a2873c5d2b74"
+  version = "v1.1.1"
 
 [[constraint]]
   name = "github.com/docker/distribution"

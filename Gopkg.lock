@@ -123,7 +123,7 @@
   revision = "bbbad097214e2918d8543d5201d12bfd7bca254d"
 
 [[projects]]
-  digest = "1:37ed754279c5805b0b0b5278093251f36ee87b2ebd36de10592f04e1b5bb6c39"
+  digest = "1:44ba821a13025c505d28e9454155dec6e13b2b178199df2f786703fdefe3916c"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -155,8 +155,8 @@
     "service/sts",
   ]
   pruneopts = "UT"
-  revision = "254f2f37e83d1b3585237fe166aacd14c1783e0b"
-  version = "v1.15.10"
+  revision = "f831d5a0822a1ad72420ab18c6269bca1ddaf490"
+  version = "v1.15.11"
 
 [[projects]]
   branch = "master"
@@ -189,6 +189,14 @@
   pruneopts = "UT"
   revision = "2178fdeea87f1150a17a63252eee28d4d8141f72"
   version = "v0.3.0"
+
+[[projects]]
+  branch = "master"
+  digest = "1:b850f95ebb44335e46f49da3aa65fd4702563d3ce441e0de225ee71ed392b010"
+  name = "github.com/containerd/console"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "4d8a41f4ce5b9bae77c41786ea2458330f43f081"
 
 [[projects]]
   digest = "1:e53b6cd6be445ad05c818b76c664fcf51d3289afc06b529f54096ec1a7da5ebf"
@@ -282,6 +290,14 @@
   version = "v1.30.0"
 
 [[projects]]
+  digest = "1:ec52d81d56e55d307da2d3dfc97ab952f9cec61d7df839ba5dd464ec08f9759e"
+  name = "github.com/cyphar/filepath-securejoin"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "06bda8370f45268db985f7af15732444d94ed51c"
+  version = "v0.2.1"
+
+[[projects]]
   digest = "1:a2c1d0e43bd3baaa071d1b9ed72c27d78169b2b269f71c105ac4ba34b1be4a39"
   name = "github.com/davecgh/go-spew"
   packages = ["spew"]
@@ -311,7 +327,7 @@
   revision = "edc3ab29cdff8694dd6feb85cfeb4b5f1b38ed9c"
 
 [[projects]]
-  digest = "1:ff74759c9e540f130f92e80f6df7aaa441c6e210ae7aa002a67ee02068a536da"
+  digest = "1:6a6a9856a182ac5c64399ea4ac8634b06f9b86fe65de7229d606634684a8e8cd"
   name = "github.com/docker/docker"
   packages = [
     "api",
@@ -346,7 +362,6 @@
     "pkg/pools",
     "pkg/promise",
     "pkg/stdcopy",
-    "pkg/symlink",
     "pkg/sysinfo",
     "pkg/system",
     "pkg/term",
@@ -404,11 +419,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:0448d1c1a596941c608762912fe7c865f88d9ffa45afb8af1edcf1401762bf7e"
+  digest = "1:79f16588b5576b1b3cd90e48d2374cc9a1a8776862d28d8fd0f23b0e15534967"
   name = "github.com/eapache/go-xerial-snappy"
   packages = ["."]
   pruneopts = "UT"
-  revision = "040cc1a32f578808623071247fdbd5cc43f37f5f"
+  revision = "776d5712da21bc4762676d614db1d8a64f4238b0"
 
 [[projects]]
   digest = "1:444b82bfe35c83bbcaf84e310fb81a1f9ece03edfed586483c869e2c046aef69"
@@ -575,11 +590,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:9887333bbef17574b1db5f9893ea137ac44107235d624408a3ac9e0b98fbb2cb"
+  digest = "1:0bfbe13936953a98ae3cfe8ed6670d396ad81edf069a806d2f6515d7bb6950df"
   name = "github.com/google/btree"
   packages = ["."]
   pruneopts = "UT"
-  revision = "e89373fe6b4a7413d7acd6da1725b83ef713e6e4"
+  revision = "4030bb1f1f0c35b30ca7009e9ebd06849dd45306"
 
 [[projects]]
   digest = "1:e1412f7730d68573a3d872acc031704ef0d687ad96ff64abcb09886cd65c3e2f"
@@ -1070,7 +1085,7 @@
   version = "v1.0.1"
 
 [[projects]]
-  digest = "1:cafd03d2de68719b72e58281c41a4fdc70e5ff7fdf9a00c2c0f3d0fb20004437"
+  digest = "1:47b264080750861f49f1a151972f9e3bb57fef9f6601ad22ac08dcb8a4b3af6f"
   name = "github.com/opencontainers/runc"
   packages = [
     ".",
@@ -1078,12 +1093,13 @@
     "libcontainer/apparmor",
     "libcontainer/cgroups",
     "libcontainer/cgroups/fs",
-    "libcontainer/cgroups/rootless",
     "libcontainer/cgroups/systemd",
     "libcontainer/configs",
     "libcontainer/configs/validate",
     "libcontainer/criurpc",
+    "libcontainer/intelrdt",
     "libcontainer/keys",
+    "libcontainer/mount",
     "libcontainer/nsenter",
     "libcontainer/seccomp",
     "libcontainer/specconv",
@@ -1093,7 +1109,8 @@
     "libcontainer/utils",
   ]
   pruneopts = "UT"
-  revision = "1c81e2a794c6e26a4c650142ae8893c47f619764"
+  revision = "4fc53a81fb7c994640722ac585fa9ca548971871"
+  version = "v1.0.0-rc5"
 
 [[projects]]
   digest = "1:57234a321bf1f8f98a8a9a5122a2404cc60d0800516f4ab7a7b2375e4b2d19ea"
@@ -1276,11 +1293,12 @@
   revision = "33e07d32887e1e06b7c025f27ce52f62c7990bc0"
 
 [[projects]]
-  digest = "1:a02bd33c56ab567d53246eeb40c76810c339af9fff7e43b5dd266f7d58d7ca4a"
+  digest = "1:03aa6e485e528acb119fb32901cf99582c380225fc7d5a02758e08b180cb56c3"
   name = "github.com/ugorji/go"
   packages = ["codec"]
   pruneopts = "UT"
-  revision = "ded73eae5db7e7a0ef6f55aace87a2873c5d2b74"
+  revision = "b4c50a2b199d93b13dc15e78929cfb23bfdf21ab"
+  version = "v1.1.1"
 
 [[projects]]
   branch = "master"
@@ -1300,14 +1318,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:1e20bc7d1b2d5afbd6ee6e29d4897c1d8155fcb23d7882fac4a97b03372b3b9c"
+  digest = "1:5d01684d2b42069b219b55e880a67bdf3f5fdf1456d5de918832ac976177029e"
   name = "github.com/vishvananda/netlink"
   packages = [
     ".",
     "nl",
   ]
   pruneopts = "UT"
-  revision = "9eab41933428cf408de91867a0719b5aa8686efa"
+  revision = "8aa85bfa77a45236ae842cab3a91853e2b74e07a"
 
 [[projects]]
   branch = "master"
@@ -1395,14 +1413,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:a60cae5be8993938498243605b120290533a5208fd5cac81c932afbad3642fb0"
+  digest = "1:d756534cd4124a2c7f9b349b2a70a63e53d4e32befae47d6a4bd938a64b92e14"
   name = "golang.org/x/sys"
   packages = [
     "unix",
     "windows",
   ]
   pruneopts = "UT"
-  revision = "98c5dad5d1a0e8a73845ecc8897d0bd56586511d"
+  revision = "4e1fef5609515ec7a2cee7b5de30ba6d9b438cbf"
 
 [[projects]]
   digest = "1:436b24586f8fee329e0dd65fd67c817681420cda1d7f934345c13fe78c212a73"
@@ -1458,7 +1476,7 @@
     "internal/fastwalk",
   ]
   pruneopts = "UT"
-  revision = "27709f6afec43b6c6d899bd199bf0f39c731216c"
+  revision = "a434f64ace81347eff0fb4a32bc80a235e0ad762"
 
 [[projects]]
   digest = "1:c8907869850adaa8bd7631887948d0684f3787d0912f1c01ab72581a6c34432e"
@@ -1874,7 +1892,7 @@
     "types",
   ]
   pruneopts = "UT"
-  revision = "c42f3cdacc394f43077ff17e327d1b351c0304e4"
+  revision = "4242d8e6c5dba56827bb7bcf14ad11cda38f3991"
 
 [[projects]]
   branch = "master"
