@@ -88,7 +88,7 @@ func (client *Client) GetValue(key string) (data []byte, found bool, revision in
 		}
 
 		found = true
-		data = append([]byte(nil), value...) // value needs to be copied
+		copy(data, value) // value needs to be copied
 
 		return nil
 	})
@@ -146,7 +146,8 @@ func (client *Client) ListValues(keyPrefix string) (keyval.BytesKeyValIterator, 
 			boltLogger.Debugf(" listing val: %q (len=%d)", string(k), len(v))
 
 			pair := &kvPair{Key: string(k)}
-			pair.Value = append([]byte(nil), v...) // value needs to be copied
+			copy(pair.Value, v) // value needs to be copied
+
 			pairs = append(pairs, pair)
 		}
 
@@ -266,7 +267,7 @@ func (pdb *BrokerWatcher) ListValues(keyPrefix string) (keyval.BytesKeyValIterat
 			boltLogger.Debugf(" listing val: %q (len=%d)", string(k), len(v))
 
 			pair := &kvPair{Key: string(k)}
-			pair.Value = append([]byte(nil), v...) // value needs to be copied
+			copy(pair.Value, v) // value needs to be copied
 
 			pairs = append(pairs, pair)
 		}

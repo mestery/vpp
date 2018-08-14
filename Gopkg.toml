@@ -24,15 +24,17 @@
 #   go-tests = true
 #   unused-packages = true
 
-required = ["github.com/wadey/gocovmerge", "github.com/docker/docker/api", "github.com/docker/swarmkit", "github.com/opencontainers/runc", "golang.org/x/exp/inotify", "github.com/google/cadvisor", "k8s.io/apiserver/pkg/apis/apiserver", "github.com/ugorji/go/codec", "github.com/docker/distribution"]
+required = ["github.com/wadey/gocovmerge", "github.com/docker/docker/api", "github.com/docker/swarmkit", "github.com/opencontainers/runc", "golang.org/x/exp/inotify", "github.com/google/cadvisor", "k8s.io/apiserver/pkg/apis/apiserver", "github.com/ugorji/go/codec", "github.com/docker/distribution", "github.com/docker/libnetwork"]
 
 [[constraint]]
   name = "github.com/ligato/vpp-agent"
-  revision = "e3900b61375e30e33ee50b3fd0f8a442f8fea4a8"
+  branch = "pr-fix-deps"
+  source = "github.com/mestery/vpp-agent"
 
 [[constraint]]
   name = "github.com/ligato/cn-infra"
-  revision = "4903fd7f8a498f0a6038df2ac6fe762697dea1f8"
+  branch = "pr-fix-deps"
+  source = "github.com/mestery/cn-infra"
 
 [[constraint]]
   revision = "f1bef4a3c66f4408afdeb64cda62ccd8562d0fc6"
@@ -43,7 +45,7 @@ required = ["github.com/wadey/gocovmerge", "github.com/docker/docker/api", "gith
   name = "github.com/wadey/gocovmerge"
 
 [[constraint]]
-  revision = "1c81e2a794c6e26a4c650142ae8893c47f619764"
+  version = "v1.0.0-rc5"
   name = "github.com/opencontainers/runc"
 
 [[constraint]]
@@ -134,6 +136,10 @@ required = ["github.com/wadey/gocovmerge", "github.com/docker/docker/api", "gith
 [[constraint]]
   name = "github.com/apparentlymart/go-cidr"
   revision = "2bd8b58cf4275aeb086ade613de226773e29e853"
+
+[[constraint]]
+  name = "github.com/docker/libnetwork"
+  revision = "9ffeaf7d8b64fa0eb64cc27835dc1a5a90328024"
 
 [prune]
   go-tests = true
