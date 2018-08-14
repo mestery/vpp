@@ -54,7 +54,7 @@ required = ["github.com/wadey/gocovmerge", "github.com/docker/docker/api", "gith
 
 [[constraint]]
   name = "github.com/ugorji/go"
-  revision = "ded73eae5db7e7a0ef6f55aace87a2873c5d2b74"
+  version = "v1.1.1"
 
 [[constraint]]
   name = "github.com/docker/distribution"
