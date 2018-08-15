@@ -1,5 +1,42 @@
 # Changelog
 
+### 0.30.2 (2018-06-21)
+- Fix concurrent map access panic
+- Don't watch .mount cgroups to reduce number of inotify watches
+- Fix NVML initialization race condition
+- Fix brtfs disk metrics when using a subdirectory of a subvolume
+
+### 0.30.1 (2018-06-11)
+- Revert switch from inotify to fsnotify
+
+### 0.30.0 (2018-06-05)
+- Use IONice to reduce IO priority of `du` and `find`
+- BREAKING API CHANGE: ContainerReference no longer contains Labels.  Use ContainerSpec instead.
+- Add schedstat metrics, disabled by default.
+- Fix a bug where cadvisor failed to discover a sub-cgroup that was created soon after the parent cgroup.
+
+### 0.29.0 (2018-02-20)
+- Disable per-cpu metrics by default for scalability
+- Fix disk usage monitoring of overlayFs
+- Retry docker connection on startup timeout
+
+### 0.28.3 (2017-12-7)
+- Add timeout for docker calls
+- Fix prometheus label consistency
+
+### 0.28.2 (2017-11-21)
+- Fix GPU init race condition
+
+### 0.28.1 (2017-11-20)
+- Add containerd support
+- Fix fsnotify regression from 0.28.0
+- Add on demand metrics
+
+### 0.28.0 (2017-11-06)
+- Add container nvidia GPU metrics
+- Expose container memory max_usage_in_bytes
+- Add container memory reservation to prometheus
+
 ### 0.27.1 (2017-09-06)
 - Add CRI-O support
 

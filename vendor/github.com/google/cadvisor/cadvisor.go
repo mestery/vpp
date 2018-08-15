@@ -64,6 +64,7 @@ var (
 	ignoreMetrics metricSetValue = metricSetValue{container.MetricSet{
 		container.NetworkTcpUsageMetrics: struct{}{},
 		container.NetworkUdpUsageMetrics: struct{}{},
+		container.ProcessSchedulerMetrics: struct{}{},
 	}}
 
 	// List of metrics that can be ignored.
@@ -72,6 +73,8 @@ var (
 		container.NetworkUsageMetrics:    struct{}{},
 		container.NetworkTcpUsageMetrics: struct{}{},
 		container.NetworkUdpUsageMetrics: struct{}{},
+		container.PerCpuUsageMetrics:     struct{}{},
+		container.ProcessSchedulerMetrics: struct{}{},
 	}
 )
 
@@ -103,7 +106,10 @@ func (ml *metricSetValue) Set(value string) error {
 }
 
 func init() {
-	flag.Var(&ignoreMetrics, "disable_metrics", "comma-separated list of `metrics` to be disabled. Options are 'disk', 'network', 'tcp', 'udp'. Note: tcp and udp are disabled by default due to high CPU usage.")
+	flag.Var(&ignoreMetrics, "disable_metrics", "comma-separated list of `metrics` to be disabled. Options are 'disk', 'network', 'tcp', 'udp', 'percpu'. Note: tcp and udp are disabled by default due to high CPU usage.")
+
+	// Default logging verbosity to V(2)
+	flag.Set("v", "2")
 }
 
 func main() {
@@ -156,7 +162,7 @@ func main() {
 	// Install signal handler.
 	installSignalHandler(containerManager)
 
-	glog.Infof("Starting cAdvisor version: %s-%s on port %d", version.Info["version"], version.Info["revision"], *argPort)
+	glog.V(1).Infof("Starting cAdvisor version: %s-%s on port %d", version.Info["version"], version.Info["revision"], *argPort)
 
 	addr := fmt.Sprintf("%s:%d", *argIp, *argPort)
 	glog.Fatal(http.ListenAndServe(addr, mux))

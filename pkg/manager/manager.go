@@ -31,7 +31,6 @@ import (
 	"github.com/contiv/vpp/pkg/cri-runtime"
 	"github.com/golang/glog"
 	"google.golang.org/grpc"
-	kubeapi "k8s.io/kubernetes/pkg/kubelet/apis/cri/v1alpha1/runtime"
 	utilexec "k8s.io/utils/exec"
 )
 

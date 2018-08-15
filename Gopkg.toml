@@ -74,7 +74,7 @@ required = ["github.com/wadey/gocovmerge", "github.com/docker/docker/api", "gith
 
 [[constraint]]
   name = "github.com/google/cadvisor"
-  revision = "cda62a43857256fbc95dd31e7c810888f00f8ec7"
+  version = "v0.30"
 
 [[constraint]]
   name = "github.com/docker/swarmkit"
